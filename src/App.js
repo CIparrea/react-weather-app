@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import WeatherApp from './WeatherApp';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 function App() {
+  const [weather, setWeather] = useState({});
+  
+  
+  const handleSubmitForCity = async () => {
+    let city = "New York";
+    const resp = await axios(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`);
+    setWeather(resp.data)
+    console.log(resp.data)
+  }
+  
+  useEffect(()=>{
+    handleSubmitForCity()
+  },[]);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="bodyBackground">
+        <WeatherApp weather={weather}/>  
+      </div>
+      <div className="credits">
+        <a href="https://github.com/CIparrea/WeatherApp">Cesar Iparrea's GitHub</a>
+      </div>
     </div>
   );
 }
