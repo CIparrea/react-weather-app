@@ -1,3 +1,8 @@
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
 .container{
     background-color: rgba(181, 181, 181, 0.3);
     border-radius: 20px;
@@ -20,14 +25,13 @@
 }
 
 .forecast{
-    background-color: green;
     width: 500px;
     height: 150px;
 }
 
 .conditions{
     height: 250px;
-    width: 150px;
+    width: 250px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -37,7 +41,7 @@
 
 .temperature{
     height: 250px;
-    width: 350px;
+    width: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +51,6 @@
 .icon{
     height: 215px;
     width: 215px;
-    /* background-image: url('./icons/cloud.svg'); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -58,15 +61,17 @@
 .condition{
     margin: 0;
     padding-bottom: 10px;
+    font-size: 40px;
 }
 
 p{
     margin: 0;
     padding: 0;
+    font-size: 20px;
 }
 
 .temp{
-    font-size: 80px;
+    font-size: 50px;
     padding-right: 10px;
 }
 
@@ -79,8 +84,45 @@ p{
     justify-content: center;
     flex-direction: row;
     font-size: 20px;
-    color: rgb(205, 205, 205)
+    color: rgba(255, 255, 255, 0.812)
 }
+
+.forecast{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.future{
+    margin: 5px;
+    background-color: rgba(225, 225, 225, 0.828);
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    height: 150px;
+    flex-direction: column;
+}
+
+.miniIcon{
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    display: block;
+}
+
+.day{
+    height: 30px;
+    margin: 5px 0px 0px 0px;
+}
+
+.minMax{
+    height: 30px;
+    margin: 5px 0px 0px 0px;
+}
+
+
 
 @media (max-width: 800px){
     .container{
@@ -111,9 +153,13 @@ p{
     }
     
     .forecast{
-        background-color: red;
         width: 330px;
         height: 200px;
+        display: block;
+        position: relative;
+        overflow: auto;
+        margin: none;
+        padding: none;   
     }
 
     .temperature{
@@ -129,4 +175,31 @@ p{
         height: 190px;
         width: 190px;
     } 
+
+    .condition{
+        font-size: 20px;
+    }
+    
+    p{
+       font-size: 15px;
+    }
+    .future{
+        display: flex;
+        width: 320px;
+        height: 50px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .miniIcon{
+        width: 50px;
+        height: 50px;
+    }
 }
+
+
+/* 
+position: relative;
+overflow: auto; */
