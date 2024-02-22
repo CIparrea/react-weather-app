@@ -7,7 +7,7 @@ function DailyTemperature({weather}) {
     <div className="container">
         <div className="daily">
             <div className="temperature">
-                <div className="icon">
+                <div className="icon" style={{backgroundImage: `url(./icons/${weather.weather[0].main}.svg)`}}>
                   <div className="temp">
                   {Math.round((Number(weather.main.temp) * (9/5)) + 32)}
                   </div>

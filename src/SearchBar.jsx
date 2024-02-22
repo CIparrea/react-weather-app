@@ -1,16 +1,23 @@
-import { useState } from 'react';
 import './searchBar.css';
 
-export default function SearchBar() {
+export default function SearchBar({city, setCity, handleSubmitForCity}) {
 
-    // useState to keep track of input value
+  function handleSubmit(e) {
+    e.preventDefault()
+    handleSubmitForCity()
+    setCity("")
+  }
 
-
-    // Input tag should have: value and onChange (sets state)
   return (
     <div>
-         <form className="searchBar">
-            <input type="text" name="input" placeholder="Type here..."/>
+         <form className="searchBar" onSubmit={handleSubmit}>
+            <input 
+              type="text" 
+              name="input" 
+              placeholder="Type here..."
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
             <button type="submit"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/VisualEditor_-_Icon_-_Search-big_-_white.svg/1200px-VisualEditor_-_Icon_-_Search-big_-_white.svg.png"/></button>  
         </form>
     </div>
