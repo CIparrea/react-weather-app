@@ -13,7 +13,6 @@
 } 
 
 .bodyBackground{
-    background: green;
     width: 600px;
     height: 600px;
     border-radius: 40px;
@@ -38,7 +37,6 @@
         height: 100vh;
         border: none;
         border-radius: 0%;
-        background: blue;
     }
 }
 

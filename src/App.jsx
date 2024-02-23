@@ -40,10 +40,7 @@ function App() {
 
   }, [weather]);
 
-
-
   
-
   function handleContainerBackground() {
     if (weather.main?.temp) {
       let condition = weather?.weather[0]?.main;
