@@ -29,14 +29,14 @@ function App() {
     setCity("");
   }, []);
 
-  // useEffect(() => {
-  //   if(count%6 === 0 && count>0){
-  //     console.log("Call function AD")
-  //   }
-  //   setCount(prev => prev+1)
-  //   setCity("");
+  useEffect(() => {
+    if(count%6 === 0 && count>0){
+      console.log("Call function AD")
+    }
+    setCount(prev => prev+1)
+    setCity("");
 
-  // }, [weather]);
+  }, [weather]);
 
 
 
