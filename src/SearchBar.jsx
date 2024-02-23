@@ -5,7 +5,6 @@ export default function SearchBar({city, setCity, handleSubmitForCity}) {
   function handleSubmit(e) {
     e.preventDefault()
     handleSubmitForCity()
-    setCity("")
   }
 
   return (

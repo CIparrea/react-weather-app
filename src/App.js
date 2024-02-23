@@ -8,6 +8,7 @@ function App() {
   const [weather, setWeather] = useState({});
   const [city, setCity] = useState("Tabasco");
   const [forecast, setForecast] = useState([]);
+  const [count, setCount] = useState(0);
 
   const handleSubmitForCity = async () => {
     const resp = await axios(
@@ -23,11 +24,23 @@ function App() {
     setForecast(daily);
   };
 
-
   useEffect(() => {
     handleSubmitForCity();
     setCity("");
   }, []);
+
+  useEffect(() => {
+    if(count%6 === 0 && count>0){
+      console.log("Call function AD")
+    }
+    setCount(prev => prev+1)
+    setCity("");
+
+  }, [weather]);
+
+
+
+  
 
   function handleContainerBackground() {
     if (weather.main?.temp) {
