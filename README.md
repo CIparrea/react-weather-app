@@ -1,7 +1,7 @@
 ![alt text](https://github.com/CIparrea/react-weather-app/blob/main/public/wireframes/logo.svg)
 # Weather App 
 
-Welcome to the [Weather App](https://weatheriparrea.netlify.app/logo192.png)! This application allows you to check the current weather in any city around the world.
+Welcome to the [Weather App](https://weatheriparrea.netlify.app/)! This application allows you to check the current weather in any city around the world.
 
 Features Search Functionality: Enter the name of the city you want to check the weather for and click the "Search" button or hit enter. 
 
