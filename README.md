@@ -1,4 +1,4 @@
-![alt text](https://github.com/CIparrea/WeatherApp/blob/main/wireframes/logo.svg)
+![alt text](https://github.com/CIparrea/WeatherApp/blob/main/public/wireframes/logo.svg)
 # Weather App 
 
 Welcome to the [Weather App](https://ciparrea.github.io/WeatherApp)! This application allows you to check the current weather in any city around the world.
@@ -23,11 +23,11 @@ Enjoy checking the weather with this app! If you have any feedback, issues, or s
 The app is designed to work seamlessly on various devices, including desktops, tablets, and smartphones.
 
 ### Wireframes
->![alt text](https://github.com/CIparrea/WeatherApp/blob/main/desktop.png)
+>![alt text](https://github.com/CIparrea/WeatherApp/blob/main/public/wireframes/fullScreen.svg)
 
->![alt text](https://github.com/CIparrea/WeatherApp/blob/main/ipad.png)
+>![alt text](https://github.com/CIparrea/WeatherApp/blob/main/public/wireframes/iPad.svg)
 
->![alt text](https://github.com/CIparrea/WeatherApp/blob/main/iphone.png)
+>![alt text](https://github.com/CIparrea/WeatherApp/blob/main/public/wireframes/iPhone.svg)
 
 ## Back End
 **Technologies Used** 
