@@ -9,6 +9,7 @@ function App() {
   const [city, setCity] = useState("Tabasco");
   const [forecast, setForecast] = useState([]);
   const [count, setCount] = useState(0);
+  const [modal, setModal] = useState(false)
 
   const handleSubmitForCity = async () => {
     const resp = await axios(
@@ -30,8 +31,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if(count%6 === 0 && count>0){
+    if(count%5 === 0 && count>0){
       console.log("Call function AD")
+      setModal(true)
     }
     setCount(prev => prev+1)
     setCity("");
@@ -84,6 +86,18 @@ function App() {
           Cesar Iparrea's GitHub
         </a>
       </div>
+      {modal && (
+        <div className="modal-container" onClick={()=> setModal(false)}>
+          <div className="close-add">
+            <button className="close" onClick={()=> setModal(false)}>x</button>
+          </div>
+          <div className="modal-content">
+            <a href="https://www.facebook.com/cogotechurrascaria/" target="_blank">
+              <img className="ad" src="/advertisement/Slide2.jpeg" alt="advertisement" />
+            </a>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

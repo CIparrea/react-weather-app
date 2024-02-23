@@ -18,6 +18,8 @@ Displays 5 days forecast at the bottom.
 
 **5 Days Forecast:** Provides information about the weather conditions, humidity and wind speed for the next 5 days.
 
+**Advertisement:** Advertisement will pop-up after 5 searches.
+
 ## How to use?
 Enter the name of the city you want to check the weather for and click the `Search` button or hit `enter`. 
 
