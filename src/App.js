@@ -80,7 +80,7 @@ function App() {
         </div>
       </div>
       <div className="credits">
-        <a href="https://github.com/CIparrea/WeatherApp">
+        <a href="https://github.com/CIparrea/react-weather-app">
           Cesar Iparrea's GitHub
         </a>
       </div>
